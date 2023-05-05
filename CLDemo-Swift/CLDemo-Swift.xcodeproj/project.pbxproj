@@ -34,7 +34,7 @@
 		5B3309E828FFFB23000D44DF /* CLCalendarHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309DE28FFFB23000D44DF /* CLCalendarHeadView.swift */; };
 		5B3309E928FFFB23000D44DF /* CLCalendarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309DF28FFFB23000D44DF /* CLCalendarFlowLayout.swift */; };
 		5B3309EA28FFFB23000D44DF /* CLCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309E028FFFB23000D44DF /* CLCalendarView.swift */; };
-		5B3309EB28FFFB23000D44DF /* CLCalendarBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309E128FFFB23000D44DF /* CLCalendarBackgroundView.swift */; };
+		5B3309EB28FFFB23000D44DF /* CLCalendarSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309E128FFFB23000D44DF /* CLCalendarSectionView.swift */; };
 		5B3309ED28FFFC4B000D44DF /* CLCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309EC28FFFC4B000D44DF /* CLCalendarViewController.swift */; };
 		5B3309F12900F496000D44DF /* CLTagsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3309F02900F496000D44DF /* CLTagsController.swift */; };
 		5B330A072901180C000D44DF /* CLRowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B330A012901180C000D44DF /* CLRowProtocol.swift */; };
@@ -361,7 +361,7 @@
 		5B3309DE28FFFB23000D44DF /* CLCalendarHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLCalendarHeadView.swift; sourceTree = "<group>"; };
 		5B3309DF28FFFB23000D44DF /* CLCalendarFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLCalendarFlowLayout.swift; sourceTree = "<group>"; };
 		5B3309E028FFFB23000D44DF /* CLCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLCalendarView.swift; sourceTree = "<group>"; };
-		5B3309E128FFFB23000D44DF /* CLCalendarBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLCalendarBackgroundView.swift; sourceTree = "<group>"; };
+		5B3309E128FFFB23000D44DF /* CLCalendarSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLCalendarSectionView.swift; sourceTree = "<group>"; };
 		5B3309EC28FFFC4B000D44DF /* CLCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCalendarViewController.swift; sourceTree = "<group>"; };
 		5B3309F02900F496000D44DF /* CLTagsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTagsController.swift; sourceTree = "<group>"; };
 		5B330A012901180C000D44DF /* CLRowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLRowProtocol.swift; sourceTree = "<group>"; };
@@ -784,7 +784,7 @@
 				5B3309D828FFFB22000D44DF /* CLCalendarModel.swift */,
 				5B3309DC28FFFB23000D44DF /* CLCalendarConfig.swift */,
 				5B3309E028FFFB23000D44DF /* CLCalendarView.swift */,
-				5B3309E128FFFB23000D44DF /* CLCalendarBackgroundView.swift */,
+				5B3309E128FFFB23000D44DF /* CLCalendarSectionView.swift */,
 				5B3309DE28FFFB23000D44DF /* CLCalendarHeadView.swift */,
 				5B3309D928FFFB22000D44DF /* CLCalendarCell.swift */,
 				5B3309DA28FFFB23000D44DF /* CLCalendarLayoutAttributes.swift */,
@@ -2518,7 +2518,7 @@
 				5BE668E7268488B90095F82E /* CLRoundAnimationView.swift in Sources */,
 				5BD0442026833B6C0054F2B4 /* CLMarqueeView.swift in Sources */,
 				5BD4EB7D26818A1300B5284F /* CLLogManager.swift in Sources */,
-				5B3309EB28FFFB23000D44DF /* CLCalendarBackgroundView.swift in Sources */,
+				5B3309EB28FFFB23000D44DF /* CLCalendarSectionView.swift in Sources */,
 				5B76931A26841C70008BB92B /* CLChatPhotoAlbumCell.swift in Sources */,
 				5B39ECCD27574A2C000FCF67 /* NSMutableAttributedString+Extension.swift in Sources */,
 				5B76933626841E11008BB92B /* CLGCDTimer.swift in Sources */,
