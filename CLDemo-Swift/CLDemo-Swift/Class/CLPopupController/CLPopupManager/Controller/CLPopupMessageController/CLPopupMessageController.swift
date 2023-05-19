@@ -44,7 +44,7 @@ class CLPopupMessageController: CLPopoverController {
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.backgroundColor = UIColor.clear
-        titleLabel.textColor = UIColor.black
+        titleLabel.textColor = UIColor.color(light: .black, dark: .red)
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
         titleLabel.font = UIFont.systemFont(ofSize: 17)

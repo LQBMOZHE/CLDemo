@@ -66,7 +66,7 @@ public extension CLPopoverManager {
         guard !share.waitQueue.values.contains(where: { $0 != controller && $0.config.identifier == controller.config.identifier && controller.config.identifier != nil }) else { return }
 
         mainSync {
-            if controller.config.isWait, !share.windows.isEmpty {
+            if controller.config.shouldWait, !share.windows.isEmpty {
                 share.waitQueue[controller.key] = controller
             } else {
                 switch controller.config.mode {
@@ -80,7 +80,11 @@ public extension CLPopoverManager {
                 }
                 let window = CLPopoverWindow(frame: UIScreen.main.bounds)
                 window.backgroundColor = .clear
-                window.isPenetrate = controller.config.isPenetrate
+                if #available(iOS 13.0, *) {
+                    window.overrideUserInterfaceStyle = controller.config.overrideUserInterfaceStyle
+                }
+                window.autoHiddenWhenPenetrate = controller.config.autoHiddenWhenPenetrate
+                window.isPenetrate = controller.config.shouldPenetrate
                 window.windowLevel = .alert + 50
                 window.rootViewController = controller
                 window.makeKeyAndVisible()
