@@ -1,5 +1,5 @@
 //
-//  CLMessagePopupController.swift
+//  CLPopupMessageController.swift
 //  Potato
 //
 //  Created by Emma on 2020/1/9.

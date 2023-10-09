@@ -1,5 +1,5 @@
 //
-//  ZenlyHexaView.swift
+//  HexagonalView.swift
 //  Hexacon
 //
 //  Created by Gautier Gdx on 05/02/16.

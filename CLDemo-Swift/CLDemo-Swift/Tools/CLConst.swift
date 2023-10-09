@@ -173,7 +173,7 @@ var pathDocuments: String {
 /// 根据时间生成随机字符串
 var dateRandomString: String {
     let string: String = nanosecondStampString + UUID().uuidString + "\(TimeInterval.random(in: 0.01 ... 10000))"
-    return (string).md5ForUpper32Bate
+    return string.md5ForUpper32Bate
 }
 
 /// 消息毫秒级时间戳格式化

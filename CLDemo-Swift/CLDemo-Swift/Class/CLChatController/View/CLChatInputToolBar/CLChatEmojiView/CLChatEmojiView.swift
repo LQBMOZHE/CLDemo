@@ -52,7 +52,7 @@ class CLChatEmojiView: UIView {
 
     /// collectionView宽度
     private var collectionViewWidth: CGFloat {
-        return (emojiViewWidth - safeAreaEdgeInsets.left - safeAreaEdgeInsets.right)
+        return emojiViewWidth - safeAreaEdgeInsets.left - safeAreaEdgeInsets.right
     }
 
     /// 数据

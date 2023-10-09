@@ -1,5 +1,5 @@
 //
-//  HexagonalViewItemAppearance.swift
+//  HexagonalItemViewAppearance.swift
 //  Hexacon
 //
 //  Created by Gautier Gdx on 05/03/16.

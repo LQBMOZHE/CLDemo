@@ -24,9 +24,7 @@ class CLDurationDataPickerView: UIView {
         return hourArray
     }()
 
-    private lazy var unitArray: [String] = {
-        ["分钟", "小时"]
-    }()
+    private lazy var unitArray: [String] = ["分钟", "小时"]
 
     private lazy var lineView: UILabel = {
         let lineView = UILabel()

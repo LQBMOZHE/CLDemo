@@ -97,15 +97,15 @@ public struct GzipError: Swift.Error {
     /// Returned message by zlib.
     public let message: String
 
-    internal init(code: Int32, msg: UnsafePointer<CChar>?) {
-        self.message = {
+    init(code: Int32, msg: UnsafePointer<CChar>?) {
+        message = {
             guard let msg = msg, let message = String(validatingUTF8: msg) else {
                 return "Unknown gzip error"
             }
             return message
         }()
 
-        self.kind = {
+        kind = {
             switch code {
             case Z_STREAM_ERROR:
                 return .stream
@@ -124,14 +124,14 @@ public struct GzipError: Swift.Error {
     }
 
     public var localizedDescription: String {
-        return self.message
+        return message
     }
 }
 
 public extension Data {
     /// Whether the receiver is compressed in gzip format.
     var isGzipped: Bool {
-        return self.starts(with: [0x1F, 0x8B]) // check magic number
+        return starts(with: [0x1F, 0x8B]) // check magic number
     }
 
     /// Create a new `Data` instance by compressing the receiver using zlib.
@@ -141,7 +141,7 @@ public extension Data {
     /// - Returns: Gzip-compressed `Data` instance.
     /// - Throws: `GzipError`
     func gzipped(level: CompressionLevel = .defaultCompression) throws -> Data {
-        guard !self.isEmpty else {
+        guard !isEmpty else {
             return Data()
         }
 
@@ -165,10 +165,10 @@ public extension Data {
                 data.count += DataSize.chunk
             }
 
-            let inputCount = self.count
+            let inputCount = count
             let outputCount = data.count
 
-            self.withUnsafeBytes { (inputPointer: UnsafeRawBufferPointer) in
+            withUnsafeBytes { (inputPointer: UnsafeRawBufferPointer) in
                 stream.next_in = UnsafeMutablePointer<Bytef>(mutating: inputPointer.bindMemory(to: Bytef.self).baseAddress!).advanced(by: Int(stream.total_in))
                 stream.avail_in = uint(inputCount) - uInt(stream.total_in)
 
@@ -201,7 +201,7 @@ public extension Data {
     /// - Returns: Gzip-decompressed `Data` instance.
     /// - Throws: `GzipError`
     func gunzipped() throws -> Data {
-        guard !self.isEmpty else {
+        guard !isEmpty else {
             return Data()
         }
 
@@ -219,16 +219,16 @@ public extension Data {
             throw GzipError(code: status, msg: stream.msg)
         }
 
-        var data = Data(capacity: self.count * 2)
+        var data = Data(capacity: count * 2)
         repeat {
             if Int(stream.total_out) >= data.count {
-                data.count += self.count / 2
+                data.count += count / 2
             }
 
-            let inputCount = self.count
+            let inputCount = count
             let outputCount = data.count
 
-            self.withUnsafeBytes { (inputPointer: UnsafeRawBufferPointer) in
+            withUnsafeBytes { (inputPointer: UnsafeRawBufferPointer) in
                 stream.next_in = UnsafeMutablePointer<Bytef>(mutating: inputPointer.bindMemory(to: Bytef.self).baseAddress!).advanced(by: Int(stream.total_in))
                 stream.avail_in = uint(inputCount) - uInt(stream.total_in)
 

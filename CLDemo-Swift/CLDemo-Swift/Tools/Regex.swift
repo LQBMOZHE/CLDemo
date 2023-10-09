@@ -87,9 +87,7 @@ public extension Regex {
     /// Match 封装有单个匹配结果
     class Match: CustomStringConvertible {
         /// 匹配的字符串
-        public lazy var string: String = {
-            String(describing: self.baseString[self.range])
-        }()
+        public lazy var string: String = .init(describing: self.baseString[self.range])
 
         /// 匹配的字符范围
         public lazy var range: Range<String.Index> = Range(self.result.range, in: self.baseString)!
@@ -113,7 +111,7 @@ public extension Regex {
         let result: NSTextCheckingResult
         private let baseString: String
         /// 初始化
-        internal init(result: NSTextCheckingResult, in string: String) {
+        init(result: NSTextCheckingResult, in string: String) {
             precondition(
                 result.regularExpression != nil,
                 "NSTextCheckingResult必需使用正则表达式"

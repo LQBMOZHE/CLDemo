@@ -1,5 +1,5 @@
 //
-//  UIColor+CLExtension.swift
+//  UIColor+Extension.swift
 //  CL
 //
 //  Created by JmoVxia on 2020/2/25.

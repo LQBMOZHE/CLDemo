@@ -48,7 +48,7 @@ public class HexagonalItemView: UIImageView {
     }
 }
 
-internal extension UIView {
+extension UIView {
     func roundImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
         guard let context = UIGraphicsGetCurrentContext() else { return UIImage() }
@@ -59,7 +59,7 @@ internal extension UIView {
     }
 }
 
-internal extension UIImage {
+extension UIImage {
     func roundImage(color: UIColor? = nil, borderWidth: CGFloat = 0) -> UIImage {
         guard size != .zero else { return self }
 

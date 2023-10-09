@@ -1,5 +1,5 @@
 //
-//  CLHoneycomLayout.swift
+//  CLHoneycombLayout.swift
 //  CLDemo-Swift
 //
 //  Created by Chen JmoVxia on 2021/8/13.

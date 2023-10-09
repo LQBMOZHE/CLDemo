@@ -1,5 +1,5 @@
 //
-//  HegagonalDirection.swift
+//  HexagonalPattern.swift
 //  Hexacon
 //
 //  Created by Gautier Gdx on 06/02/16.
@@ -15,7 +15,7 @@ final class HexagonalPattern {
 
     // MARK: - data
 
-    internal var repositionCenter: ((CGPoint, Int, Int) -> Void)?
+    var repositionCenter: ((CGPoint, Int, Int) -> Void)?
 
     private var position: HexagonalPosition! {
         didSet {

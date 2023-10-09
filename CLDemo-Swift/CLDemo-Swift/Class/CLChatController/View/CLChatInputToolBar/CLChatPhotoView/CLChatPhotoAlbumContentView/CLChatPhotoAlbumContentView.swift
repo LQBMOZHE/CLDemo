@@ -1,5 +1,5 @@
 //
-//  CLChatAlbumContentView.swift
+//  CLChatPhotoAlbumContentView.swift
 //  CLDemo
 //
 //  Created by Emma on 2020/2/11.

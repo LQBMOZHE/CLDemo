@@ -1,5 +1,5 @@
 //
-//  CKDSectionProtocol.swift
+//  CLSectionProtocol.swift
 //  CKDDoctor
 //
 //  Created by Chen JmoVxia on 2022/6/15.

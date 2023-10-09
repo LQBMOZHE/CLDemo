@@ -1,5 +1,5 @@
 //
-//  CLInfiniteCollectionView.swift
+//  CLInfiniteView.swift
 //  CLDemo
 //
 //  Created by Chen JmoVxia on 2020/11/4.
@@ -141,7 +141,7 @@ extension CLInfiniteView {
 
     private func getTotalContentHeight() -> CGFloat {
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout, let numberOfCells = dataSource?.numberOfItems(in: self) else { return 0 }
-        return (CGFloat(numberOfCells) * (layout.itemSize.height + layout.minimumLineSpacing))
+        return CGFloat(numberOfCells) * (layout.itemSize.height + layout.minimumLineSpacing)
     }
 
     private func getCorrectedIndex(_ indexToCorrect: Int) -> Int {
